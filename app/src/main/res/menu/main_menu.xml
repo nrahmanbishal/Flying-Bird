@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/home"
+            android:icon="@drawable/ic_home_outline">
+        </item>
+
+        <item
+            android:id="@+id/nav_sign_in"
+            android:title="@string/sign_in"
+            android:icon="@drawable/ic_person_outline">
+        </item>
+
+        <item
+            android:id="@+id/wish_list"
+            android:title="@string/wishlist"
+            android:icon="@drawable/ic_favourite_outline">
+        </item>
+
+        <item
+            android:id="@+id/nav_contact_us"
+            android:title="@string/contact_us"
+            android:icon="@drawable/ic_contact_us">
+        </item>
+
+        <item
+            android:id="@+id/nav_terms_condition"
+            android:title="@string/terms_condition"
+            android:icon="@drawable/ic_outline_description_24">
+        </item>
+    </group>
+</menu>
