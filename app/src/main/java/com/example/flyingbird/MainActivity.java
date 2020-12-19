@@ -9,13 +9,18 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.luseen.spacenavigation.SpaceItem;
+import com.luseen.spacenavigation.SpaceNavigationView;
+import com.luseen.spacenavigation.SpaceOnClickListener;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    SpaceNavigationView spaceNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.navigation_view);
         toolbar=findViewById(R.id.toolbar);
+        spaceNavigationView=findViewById(R.id.space);
 
         setSupportActionBar(toolbar);
 
@@ -34,6 +40,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
+
+        spaceNavigationView.initWithSaveInstanceState(savedInstanceState);
+        spaceNavigationView.addSpaceItem(new SpaceItem("HOME", R.drawable.ic_home_outline));
+        spaceNavigationView.addSpaceItem(new SpaceItem("Wishlist", R.drawable.ic_favourite_outline));
+        spaceNavigationView.addSpaceItem(new SpaceItem("Cart", R.drawable.ic_shoping_cart_outline));
+        spaceNavigationView.addSpaceItem(new SpaceItem("Account", R.drawable.ic_person_outline));
+        spaceNavigationView.shouldShowFullBadgeText(true);
+
+        spaceNavigationView.setSpaceOnClickListener(new SpaceOnClickListener() {
+            @Override
+            public void onCentreButtonClick() {
+                Toast.makeText(MainActivity.this,"onCentreButtonClick", Toast.LENGTH_SHORT).show();
+                spaceNavigationView.setCentreButtonSelectable(true);
+            }
+
+            @Override
+            public void onItemClick(int itemIndex, String itemName) {
+                Toast.makeText(MainActivity.this, itemIndex + " " + itemName, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onItemReselected(int itemIndex, String itemName) {
+                Toast.makeText(MainActivity.this, itemIndex + " " + itemName, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

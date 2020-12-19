@@ -25,6 +25,21 @@
         <include
             android:id="@+id/toolbar"
             layout="@layout/toolbar" />
+
+        <com.luseen.spacenavigation.SpaceNavigationView
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            app:active_item_color="#E62121"
+            app:centre_button_color="@color/centre_button_color"
+            app:inactive_item_color="@color/white"
+            app:space_background_color="#CEF60101"
+            app:centre_button_icon="@drawable/capture"
+            app:space_item_icon_size="50dp"
+            app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
+            app:space_item_text_size="@dimen/space_item_text_default_size" />
     </RelativeLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>
