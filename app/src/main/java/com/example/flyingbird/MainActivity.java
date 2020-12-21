@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         spaceNavigationView.addSpaceItem(new SpaceItem("Wishlist", R.drawable.ic_favourite_outline));
         spaceNavigationView.addSpaceItem(new SpaceItem("Cart", R.drawable.ic_shoping_cart_outline));
         spaceNavigationView.addSpaceItem(new SpaceItem("Account", R.drawable.ic_person_outline));
-        spaceNavigationView.shouldShowFullBadgeText(true);
+        //spaceNavigationView.shouldShowFullBadgeText(true);
+        spaceNavigationView.showIconOnly();
 
         spaceNavigationView.setSpaceOnClickListener(new SpaceOnClickListener() {
             @Override
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             @Override
             public void onItemReselected(int itemIndex, String itemName) {
-                Toast.makeText(MainActivity.this, itemIndex + " " + itemName, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, itemIndex + " Reselect " + itemName, Toast.LENGTH_SHORT).show();
             }
         });
     }
