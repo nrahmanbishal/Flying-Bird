@@ -6,8 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    android:fitsSystemWindows="true">
+    <!--tools:openDrawer="start"-->
+
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
@@ -25,6 +26,101 @@
         <include
             android:id="@+id/toolbar"
             layout="@layout/toolbar" />
+        <LinearLayout
+            android:id="@+id/ll_circle_icons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="70dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/circle"
+                android:padding="12dp"
+                android:src="@drawable/ic_category">
+            </ImageView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/circle"
+                android:padding="12dp"
+                android:src="@drawable/ic_gift_card">
+            </ImageView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/circle"
+                android:padding="12dp"
+                android:src="@drawable/ic_order">
+            </ImageView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/circle"
+                android:padding="12dp"
+                android:src="@drawable/ic_flush">
+            </ImageView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/circle"
+                android:padding="12dp"
+                android:src="@drawable/ic_about">
+            </ImageView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/ll_circle_icons"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_circle_button_text"
+                android:layout_marginRight="@dimen/margin_circle_button_text"
+                android:text="Categories"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_circle_button_text"
+                android:layout_marginRight="@dimen/margin_circle_button_text"
+                android:textColor="@color/black"
+                android:text="Gift Card" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_circle_button_text"
+                android:layout_marginRight="@dimen/margin_circle_button_text"
+                android:textColor="@color/black"
+                android:text="Orders" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_circle_button_text"
+                android:layout_marginRight="@dimen/margin_circle_button_text"
+                android:textColor="@color/black"
+                android:text="Flush Sale" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_circle_button_text"
+                android:layout_marginRight="@dimen/margin_circle_button_text"
+                android:textColor="@color/black"
+                android:text="About" />
+
+        </LinearLayout>
 
         <com.luseen.spacenavigation.SpaceNavigationView
             android:id="@+id/space"
@@ -36,7 +132,7 @@
             app:centre_button_color="@color/white"
             app:inactive_item_color="@color/black"
             app:space_background_color="#CEF1EAEA"
-            app:centre_button_icon="@drawable/capture"
+            app:centre_button_icon="@drawable/flying_logo"
             app:space_item_icon_size="50dp"
             app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
             app:space_item_text_size="@dimen/space_item_text_default_size" />
