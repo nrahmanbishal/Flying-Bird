@@ -132,7 +132,7 @@
             app:centre_button_color="@color/white"
             app:inactive_item_color="@color/black"
             app:space_background_color="#CEF1EAEA"
-            app:centre_button_icon="@drawable/flying_logo"
+            app:centre_button_icon="@drawable/capture"
             app:space_item_icon_size="50dp"
             app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
             app:space_item_text_size="@dimen/space_item_text_default_size" />
